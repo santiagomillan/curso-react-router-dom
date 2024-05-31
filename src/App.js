@@ -4,6 +4,8 @@ import { BlogPage } from './BlogPage';
 import { Profile } from './Profile';
 import { Menu } from './Menu';
 
+// HashRouter /#/ para navegacion
+
 function App() {
   return (
     <>
