@@ -3,6 +3,7 @@ import { HomePage } from './HomePage';
 import { BlogPage } from './BlogPage';
 import { Profile } from './Profile';
 import { Menu } from './Menu';
+import { BlogPost } from './BlogPost';
 
 // HashRouter /#/ para navegacion
 
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage/>} />
         <Route path="/blog" element={<BlogPage/>} />
+        <Route path="/blog/:slug" element={<BlogPost/>} />
         <Route path="/profile" element={<Profile/>} />
         <Route path="*" element={<p>Not Found</p>} />
       </Routes>
