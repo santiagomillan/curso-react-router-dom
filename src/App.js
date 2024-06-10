@@ -6,7 +6,7 @@ import { Menu } from './Menu';
 import { BlogPost } from './BlogPost';
 import { LoginPage } from './LoginPage';
 import { LogoutPage } from './LogoutPage';
-import { AuthProvider } from './auth'
+import { AuthProvider, AuthRoute } from './auth'
 
 // HashRouter /#/ para navegacion
 
@@ -25,10 +25,25 @@ function App() {
         </Route>
         
         <Route path="/login" element={<LoginPage/>} />
-        <Route path="/Logout" element={<LogoutPage/>} />
+        {/* <Route path="/Logout" element={<LogoutPage/>} /> */}
 
+        <Route 
+          path="/Logout" 
+          element={
+            <AuthRoute>
+              <LogoutPage/>
+            </AuthRoute>
+          } 
+        />
 
-        <Route path="/profile" element={<Profile/>} />
+        <Route 
+          path="/profile" 
+          element={
+            <AuthRoute>
+              <Profile/>
+            </AuthRoute>
+          } 
+        />
         <Route path="*" element={<p>Not Found</p>} />
       </Routes>
 
