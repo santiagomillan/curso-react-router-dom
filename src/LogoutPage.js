@@ -17,7 +17,7 @@ function LogoutPage()  {
       <form onSubmit={logout}>
         <label>¿Seguro de que quieres salir?</label>
 
-        <button type='submit'>Salior</button>
+        <button type='submit'>Salir</button>
       </form>
     </>
   )
