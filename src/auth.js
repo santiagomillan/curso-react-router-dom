@@ -44,8 +44,13 @@ function AuthProvider({ children }) {
   const navigate = useNavigate();
   const [user, setUser] = React.useState(null);
 
+  const adminList = [
+    'Santiago', 'freddier'
+  ]
+
   const login = ({ username }) => {
-    setUser({ username });
+    const isAdmin = adminList.find(admin => admin === username);
+    setUser({ username, isAdmin });
     navigate('/profile');
   };
   
