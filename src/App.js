@@ -6,6 +6,7 @@ import { Menu } from './Menu';
 import { BlogPost } from './BlogPost';
 import { LoginPage } from './LoginPage';
 import { LogoutPage } from './LogoutPage';
+import { AuthProvider } from './auth'
 
 // HashRouter /#/ para navegacion
 
@@ -13,6 +14,7 @@ function App() {
   return (
     <>
     <HashRouter>
+      <AuthProvider>
       <Menu/>
 
       <Routes>
@@ -29,6 +31,8 @@ function App() {
         <Route path="/profile" element={<Profile/>} />
         <Route path="*" element={<p>Not Found</p>} />
       </Routes>
+
+      </AuthProvider>
 
     </HashRouter>
     </>
