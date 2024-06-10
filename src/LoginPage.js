@@ -5,9 +5,9 @@ function LoginPage()  {
   const auth = useAuth()
   const [username, setUsername] = React.useState("")
   const login = (e) =>{
-    e.preventDefault()
+    e.preventDefault();
     console.log(username)
-    auth.login({username})
+    auth.login({ username });
   }
 
   return (
@@ -16,7 +16,7 @@ function LoginPage()  {
 
       <form onSubmit={login}>
         <label>Escribe tu nombre de usuario: </label>
-        <input 
+        <input
           value={username}
           onChange={e => setUsername(e.target.value)}
         />

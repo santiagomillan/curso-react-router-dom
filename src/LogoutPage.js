@@ -7,8 +7,7 @@ function LogoutPage()  {
 
 
   const logout = (e) =>  {
-    e.preventDefault()
-    console.log("Logout")
+    e.preventDefault();
     auth.logout()
   }
   return (
